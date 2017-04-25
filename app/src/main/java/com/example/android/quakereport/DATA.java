@@ -13,13 +13,13 @@ private double mquakemag;
 private  String mquakeplace;
     private long mquakedate;
 
+private String mUrl;
 
-
-    public DATA(double quakemag, String quakeplace, long quakedate)
+    public DATA(double quakemag, String quakeplace, long quakedate,String url)
     {
 
         mquakemag=quakemag;
-
+       mUrl=url;
 
         mquakeplace=quakeplace;
 
@@ -54,6 +54,11 @@ private  String mquakeplace;
 
     }
 
+   public String getUrl(){
 
+
+       return mUrl;
+
+   }
 
    }

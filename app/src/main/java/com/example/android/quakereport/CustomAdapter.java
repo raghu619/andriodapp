@@ -26,7 +26,7 @@ public class CustomAdapter extends ArrayAdapter<DATA> {
 
     private static final String LOCATION_SEPAROTOR = "of";
 
-    public CustomAdapter(Activity context, ArrayList<DATA> k) {
+    public CustomAdapter(Activity context,ArrayList<DATA> k) {
         super(context, 0, k);
     }
 
@@ -52,7 +52,8 @@ public class CustomAdapter extends ArrayAdapter<DATA> {
             String parts[] = originalLocation.split(LOCATION_SEPAROTOR);
             locationOffset = parts[0] + LOCATION_SEPAROTOR;
             primaryLocation = parts[1];
-        } else {
+        } else
+            {
 
             locationOffset = getContext().getString(R.string.near_the);
             primaryLocation = originalLocation;
@@ -67,14 +68,14 @@ public class CustomAdapter extends ArrayAdapter<DATA> {
 
         textView.setText("" + mag);
         GradientDrawable magnitudeCircle = (GradientDrawable) textView.getBackground();
-        int magnitudeColor = getMagnitudeColor(k.getMquakemag());
+        int magnitudeColor=getMagnitudeColor(k.getMquakemag());
         magnitudeCircle.setColor(magnitudeColor);
 
-        TextView placetextView = (TextView) listItemView.findViewById(R.id.quakeplace);
+        TextView placetextView =(TextView) listItemView.findViewById(R.id.quakeplace);
         placetextView.setText("" + primaryLocation);
 
 
-        TextView placetextView1 = (TextView) listItemView.findViewById(R.id.quakeplace1);
+        TextView placetextView1=(TextView) listItemView.findViewById(R.id.quakeplace1);
         placetextView1.setText("" + locationOffset);
 
 
