@@ -142,7 +142,7 @@ public class CustomAdapter extends ArrayAdapter<DATA> {
 
 
         }
-        return ContextCompat.getColor(getContext(), magnitudeColorResourceId);
+        return ContextCompat.getColor(getContext(),magnitudeColorResourceId);
 
     }
 
